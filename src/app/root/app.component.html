@@ -1,0 +1,9 @@
+<form class="form" [formGroup]="form">
+  <div class="form-field">
+    <label for="password">Password</label>
+    <input id="password" formControlName="password" type="text">
+    <div class="password-strength" >
+      <span [class]="form.get('password')?.errors | passwordStrength"></span>
+    </div>
+  </div>
+</form>
